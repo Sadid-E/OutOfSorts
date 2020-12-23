@@ -1,10 +1,7 @@
 import java.util.Arrays;
 
 public class Sorts{
-  /**Bubble sort of an int array.
-  *Upon completion, the elements of the array will be in increasing order.
-  *@param data  the elements to be sorted.
-  */
+
   public static void bubbleSort(int[] data){
     for (int i = 0; i < data.length; i++) {
       int swap = 0;
@@ -22,4 +19,19 @@ public class Sorts{
       }
     }
   }
+
+  public static void selectionSort(int[] data){
+    for (int i = 0; i < data.length; i++) {
+      int smallest = i;
+      for (int j = i; j < data.length; j++) {
+        if (data[j] < data[smallest]) {
+          smallest = j;
+        }
+      }
+      int a = data[i];
+      data[i] = data[smallest];
+      data[smallest] = a;
+    }
+  }
+
 }
